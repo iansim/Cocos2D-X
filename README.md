@@ -12,5 +12,5 @@ Advanced Main Menu:
  For a project of mine i've written an advanced menu test that handles sound,
  music and animations, without the usage of CocoStudio. 
  
- ![advmm](github.com/snlbase/Cocos2D-X/img/advmm.jpg)
+ ![alt tag](https://raw.github.com/snlbase/Cocos2D-X/master/img/advmm.jpg)
  
