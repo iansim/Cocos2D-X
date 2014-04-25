@@ -29,3 +29,10 @@ Infinite Runner Scene:
  and modular loading of the advanced player class.
  
  ![Scene](https://raw.github.com/snlbase/Cocos2D-X/master/img/advscene.jpg)
+ 
+Infinite Runner VS 2010/2013 Complete Solution:
+--------------
+ Infinite Runner VS 2010/2013 solution for Cocos2D-X v.2.2.2 including resources.
+ This is the complete package containing all classes and resources. 
+ 
+ ![Scene](https://raw.github.com/snlbase/Cocos2D-X/master/img/vssolution.jpg)
