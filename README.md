@@ -11,3 +11,5 @@ Advanced Main Menu:
  Advanced Main Menu for Cocos2D-X v.2.2.2 including resources.
  For a project of mine i've written an advanced menu test that handles sound,
  music and animations, without the usage of CocoStudio. 
+ 
+ ![advmm](snlbase.github.com/Cocos2D-X/img/advmm.jpg)
