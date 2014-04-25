@@ -21,3 +21,11 @@ Advanced Player Class:
  and various states of the player.
  
  ![Player](https://raw.github.com/snlbase/Cocos2D-X/master/img/advplayer.jpg)
+
+Infinite Runner Scene:
+--------------
+ Infinite Runner Scene for Cocos2D-X v.2.2.2 including resources.
+ For a project of mine i've written an infinite runner scene that handles parallax scrolling 
+ and modular loading of the advanced player class.
+ 
+ ![Scene](https://raw.github.com/snlbase/Cocos2D-X/master/img/advscene.jpg)
