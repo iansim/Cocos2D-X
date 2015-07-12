@@ -5,8 +5,10 @@ Personal collection of handy classes and snippets for the Cocos2D-X framework.
 You're welcome to include these in your projects and adjust to your needs.
 Also feel free to optimize the code and commit your changes.
 
-Swipe gestures demo for Cocos2D-X 3.6:
+Swipe Gestures (Cocos2D-X 3.6):
 --------------
+Basic swipe gestures and MoveBy actions. Drag and drop it into a new created project.
+
  ![SwipeG](https://raw.github.com/snlbase/Cocos2D-X/master/img/swgest.gif)
 
 Advanced Main Menu:
