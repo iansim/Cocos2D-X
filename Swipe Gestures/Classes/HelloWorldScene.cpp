@@ -60,9 +60,16 @@ void HelloWorld::update(float dt)
         auto icoTouch = Sprite::create("touchgfx/touch.png");
         icoTouch->setPosition(Point(currentTouchPos[0], currentTouchPos[1]));
         this->addChild(icoTouch,1);
+        icoTouch->setTag(25);
         
         FadeOut* fadeOut = FadeOut::create(0.5f);
-        icoTouch->runAction(fadeOut);
+        
+        auto removeIt = CallFunc::create([icoTouch]() {
+            icoTouch->removeFromParent();
+        });
+        
+        icoTouch->runAction(Sequence::create(fadeOut, removeIt, nullptr));
+       
         
         if (initialTouchPos[0] - currentTouchPos[0] > visibleSize.width * 0.05)
         {
@@ -70,6 +77,7 @@ void HelloWorld::update(float dt)
             MoveBy *move_left = MoveBy::create(2, Point(-50, 0));  // create move left action
             this->getChildByName("cclogo")->runAction(move_left); // calling cclogo sprite by name and run action
             isTouchDown = false;
+           
         }
         else if (initialTouchPos[0] - currentTouchPos[0] < - visibleSize.width * 0.08)
         {
@@ -77,6 +85,7 @@ void HelloWorld::update(float dt)
             MoveBy *move_right = MoveBy::create(2, Point(50, 0)); // create move right action
             this->getChildByName("cclogo")->runAction(move_right); // calling cclogo sprite by name
             isTouchDown = false;
+            
         }
         else if (initialTouchPos[1] - currentTouchPos[1] > visibleSize.width * 0.05)
         {
@@ -84,6 +93,7 @@ void HelloWorld::update(float dt)
             MoveBy *move_down = MoveBy::create(2, Point(0, -50)); // create move down action
             this->getChildByName("cclogo")->runAction(move_down); // calling cclogo sprite by name
             isTouchDown = false;
+            
         }
         else if (initialTouchPos[1] - currentTouchPos[1] < - visibleSize.width * 0.05)
         {
@@ -92,8 +102,11 @@ void HelloWorld::update(float dt)
             this->getChildByName("cclogo")->runAction(move_down); // calling cclogo sprite by name
             isTouchDown = false;
         }
+        
     }
+  
 }
+
 
 bool HelloWorld::onTouchBegan(Touch *touch, Event *event)
 {
@@ -113,6 +126,8 @@ void HelloWorld::onTouchMoved(Touch *touch, Event *event)
 {
     currentTouchPos[0] = touch->getLocation().x;
     currentTouchPos[1] = touch->getLocation().y;
+    
+   
 }
 
 void HelloWorld::onTouchEnded(Touch *touch, Event *event)
@@ -124,6 +139,7 @@ void HelloWorld::onTouchCancelled(Touch *touch, Event *event)
 {
     onTouchEnded(touch, event);
 }
+
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
